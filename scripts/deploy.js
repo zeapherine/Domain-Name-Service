@@ -14,11 +14,11 @@ const main = async () => {
 	console.log('Minted domain Ichiraku.ramen');
 
 	txn = await domainContract.setRecord(
-		'Ichiraku ramen',
+		'Ichiraku',
 		'Naruto Favoured Ramen'
 	);
 	await txn.wait();
-	console.log('Set record Ichiraku ramen');
+	console.log('Set record Ichiraku.ramen');
 
 	const address = await domainContract.getAddress('Ichiraku');
 	console.log('Owner of Ichiraku ramen:', address);
